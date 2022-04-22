@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="shortcut icon" href="../Images/logo.png">
+    <!-- External Files -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootnavbar.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;900&display=swap" rel="stylesheet">
+    <style>
+        .tablink {
+            background-color: #555;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 8px 16px;
+            font-size: 17px;
+        }
+
+        .tablink:hover {
+            background-color: #777;
+        }
+
+        .btnset {
+            text-align: center;
+            padding: 32px;
+        }
+
+        #button {
+            display: inline-block;
+            background-color: #333;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            border-radius: 4px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            transition: background-color .3s,
+                opacity .5s, visibility .5s;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+
+        #button::after {
+            content: "\f062";
+            font-family: FontAwesome;
+            font-style: normal;
+            font-size: 2em;
+            color: #fff;
+        }
+
+        #button:hover {
+            cursor: pointer;
+            background-color: rgb(158, 152, 152);
+        }
+
+        #button:active {
+            background-color: #555;
+        }
+
+        #button.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+        @media (min-width: 500px) {
+
+            #button {
+                margin: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body style="font-family: 'Poppins', sans-serif; background-color: #E8E6D4">
+    <button id="button"></button>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-2/.5 shadow-xl sticky-top"
+        style="background-color: #61615d; font-family: 'Nunito', sans-serif; letter-spacing: 1px;">
+        <div class="container-fluid">
+            <a href="../index.html" class="navbar-brand"><img src="../Images/logo.png" alt="" width="43"></a>
+            <!-- Toogle Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcoll">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarcoll">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="../subpages/gallery.html" class="nav-link active">Gallery</a></li>
+                    <!-- Main Drop-Down-->
+                    
+
+                    <li class="nav-item"><a href="../subpages/about.html" class="nav-link">About</a></li>
+                </ul>
+                
+
+                </ul>
+                <ul class="navbar-nav mr-lg-4 nav-flex-icons">
+                    <li class="nav-item">
+                        <a href="https://github.com/" target="_blank" class="nav-link waves-effect waves-light">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://twitter.com/?lang=en" target="_blank"
+                            class="nav-link waves-effect waves-light">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://pk.linkedin.com/" target="_blank" class="nav-link waves-effect waves-light">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.figma.com/" target="_blank" class="nav-link waves-effect waves-light">
+                            <i class="fab fa-figma"></i>
+                        </a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <!-- download Button -->
+                    <a href="../PDFs/Monument.pdf" download="Historical-Monuments"
+                        class="btn btn-outline-warning my-2 my-sm-0 size" style="text-decoration: none">Download</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <div class="container-fluid mt-4">
+       
+
+        <!-- ==========  Page 1  ============ -->
+        <div id="page-1" class="tabcontent">
+            <!--Grid row-->
+            <div class="row">
+
+                <!--Grid column 1 -->
+                <div class="col-lg-4 col-md-12 mb-4">
+
+                    <img src="../Images/Gallery Images/page-1/img2.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img1.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img7.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img19.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img15.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img11.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img24.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img27.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+
+                </div>
+
+                <!--Grid column 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <img src="../Images/Gallery Images/page-1/img4.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img5.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img14.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img10.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img13.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img12.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img21.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img25.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+
+                </div>
+
+                <!--Grid column 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <img src="../Images/Gallery Images/page-1/img3.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img20.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img8.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img9.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img16.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img6.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img17.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img23.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+
+                </div>
+            </div>
+            <!--Grid row-->
+        </div>
+
+        <!-- =============  Page 2  ================= -->
+        <div id="page-2" class="tabcontent">
+            <!--Grid row-->
+            <div class="row">
+
+                <!--Grid column 1 -->
+                <div class="col-lg-4 col-md-12 mb-4">
+
+                    <img src="../Images/Gallery Images/page-2/alexander-mils-4FLT8mzVCr8-unsplash.jpg"
+                        class="img-fluid mb-4 rounded" data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/k-mitch-hodge-oQ9pECond48-unsplash.jpg"
+                        class="img-fluid mb-4 rounded" data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/library-of-congress-6aZ9IhOSifM-unsplash.jpg"
+                        class="img-fluid mb-4 rounded" data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/caleb-weiner-b8mcjSa3L3E-unsplash.jpg"
+                        class="img-fluid mb-4 rounded" data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/jose-ignacio-pompe--EoObX4PQHg-unsplash.jpg"
+                        class="img-fluid mb-4 rounded" data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/markus-winkler-hZBecyuCcLo-unsplash.jpg"
+                        class="img-fluid mb-4 rounded" data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/darklabs-india-T8RIgOgpLoE-unsplash.jpg"
+                        class="img-fluid mb-4 rounded" data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/karolis-milisauskas-9jwD1j68H1U-unsplash.jpg"
+                        class="img-fluid mb-4 rounded" data-wow-delay="0.2s">
+
+                </div>
+
+                <!--Grid column 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <img src="../Images/Gallery Images/page-2/geike-verniers-grxyt4TlIBo-unsplash.jpg"
+                        class="img-fluid mb-4 rounded" data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/raimond-klavins-9RLzrJhN0mE-unsplash.jpg"
+                        class="img-fluid mb-4 rounded" data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/raimond-klavins-BvHhjjni-Dk-unsplash.jpg"
+                        class="img-fluid mb-4 rounded" data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/gloria-cretu-iek_zWEB0Fw-unsplash.jpg"
+                        class="img-fluid mb-4 rounded" data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/img1.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/img2.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/im3.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/img4.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+
+                </div>
+
+                <!--Grid column 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <img src="../Images/Gallery Images/page-2/img6.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/img5.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/img8.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/img7.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/img9.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/img8.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-2/img11.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                </div>
+            </div>
+            <!--Grid row-->
+        </div>
+
+        <!-- ===============  Page 3  =============== -->
+        <div id="page-3" class="tabcontent">
+            <!--Grid row-->
+            <div class="row">
+
+                <!--Grid column 1 -->
+                <div class="col-lg-4 col-md-12 mb-4">
+
+                    <img src="../Images/Gallery Images/page-3/img17.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.5s">
+                    <img src="../Images/Gallery Images/page-3/img9.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.3s">
+                    <img src="../Images/Gallery Images/page-3/img8.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.3s">
+                    <img src="../Images/Gallery Images/page-3/img9.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.5s">
+                    <img src="../Images/Gallery Images/page-3/darklabs-india-T8RIgOgpLoE-unsplash.jpg"
+                        class="img-fluid mb-4 rounded" data-wow-delay="0.5s">
+                    <img src="../Images/Gallery Images/page-3/img18.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.5s">
+                    <img src="../Images/Gallery Images/page-3/img10.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.5s">
+
+                </div>
+
+                <!--Grid column 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <img src="../Images/Gallery Images/page-1/img5.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.4s">
+                    <img src="../Images/Gallery Images/page-1/img4.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.1s">
+                    <img src="../Images/Gallery Images/page-1/img10.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.4s">
+                    <img src="../Images/Gallery Images/page-1/img14.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.4s">
+                    <img src="../Images/Gallery Images/page-1/img13.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.4s">
+                    <img src="../Images/Gallery Images/page-1/img12.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.4s">
+                    <img src="../Images/Gallery Images/page-1/img21.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.4s">
+                    <img src="../Images/Gallery Images/page-1/img25.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.4s">
+                    <img src="../Images/Gallery Images/page-3/img.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.5s">
+                    <img src="../Images/Gallery Images/page-3/gonzalo-facello-S31J6gnEYjc-unsplash.jpg"
+                        class="img-fluid mb-4 rounded" data-wow-delay="0.5s">
+
+
+                </div>
+
+                <!--Grid column 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <img src="../Images/Gallery Images/page-1/img20.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.5s">
+                    <img src="../Images/Gallery Images/page-1/img3.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.2s">
+                    <img src="../Images/Gallery Images/page-1/img8.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.5s">
+                    <img src="../Images/Gallery Images/page-1/img9.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.5s">
+                    <img src="../Images/Gallery Images/page-1/img16.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.5s">
+                    <img src="../Images/Gallery Images/page-1/img6.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.5s">
+                    <img src="../Images/Gallery Images/page-1/img17.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.5s">
+                    <img src="../Images/Gallery Images/page-1/img23.jpg" class="img-fluid mb-4 rounded"
+                        data-wow-delay="0.5s">
+                    <img src="../Images/Gallery Images/page-3/gloria-cretu-iek_zWEB0Fw-unsplash.jpg"
+                        class="img-fluid mb-4 rounded" data-wow-delay="0.5s">
+
+                </div>
+                
+            </div>
+            <!--Grid row-->
+        </div>
+        <div class="btnset">
+            <button class="tablink rounded" onclick="openPage('page-1', this, 'white', 'black')"
+                id="defaultOpen">1</button>
+            <button class="tablink rounded" onclick="openPage('page-2', this, 'white', 'black')">2</button>
+            <button class="tablink rounded" onclick="openPage('page-3', this, 'white', 'black')">3</button>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="text-gray-600 body-font bg-light shadow">
+        <div class="container px-5 py-4 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                <img src="../Images/logo.png" alt="Logo" width="55">
+                <span class="ml-3 text-md-left" style="font-family: 'Nunito', sans-serif">Historical<br>Monuments</span>
+            </a>
+            <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">©
+                2021
+                Historical Monuments<br> All right reserved —
+                sameedsiddiqui9@gmail.com
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                <a href="https://www.facebook.com/" target="_blank" class="text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/?lang=en" target="_blank" class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="w-5 h-5" viewBox="0 0 24 24">
+                        <path
+                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                </a>
+            </span>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
+            if (!$(this).next().hasClass('show')) {
+                $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+            }
+            var $subMenu = $(this).next(".dropdown-menu");
+            $subMenu.toggleClass('show');
+
+
+            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+                $('.dropdown-submenu .show').removeClass("show");
+            });
+            return false;
+        });
+
+        // ===============
+        function openPage(pageNum, elmnt, bdcolor, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageNum).style.display = "block";
+            elmnt.style.backgroundColor = bdcolor;
+            elmnt.style.color = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        // btn
+
+        var btn = $('#button');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanks Your Response</title>
+  <link rel="shortcut icon" href="../Images/logo.png">
+  <!-- External Files -->
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/bootnavbar.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;900&display=swap" rel="stylesheet">
+  <style>
+    #button {
+      display: inline-block;
+      background-color: #333;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      border-radius: 4px;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      transition: background-color .3s,
+        opacity .5s, visibility .5s;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1000;
+    }
+
+    #button::after {
+      content: "\f062";
+      font-family: FontAwesome;
+      font-style: normal;
+      font-size: 2em;
+      color: #fff;
+    }
+
+    #button:hover {
+      cursor: pointer;
+      background-color: rgb(158, 152, 152);
+    }
+
+    #button:active {
+      background-color: #555;
+    }
+
+    #button.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+
+    @media (min-width: 500px) {
+
+      #button {
+        margin: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body style="font-family: 'Poppins', sans-serif; background-color: #e1e5ec">
+  <button id="button"></button>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-2/.5 shadow-xl sticky-top"
+    style="background-color: #61615d; font-family: 'Nunito', sans-serif; letter-spacing: 1px;">
+    <div class="container-fluid">
+      <a href="../index.html" class="navbar-brand"><img src="../Images/logo.png" width="43"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcoll">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarcoll">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="../subpages/gallery.html" class="nav-link">Gallery</a></li>
+          <!-- Main Drop-Down-->
+         
+        </ul>
+        </li>
+        <li class="nav-item"><a href="../subpages/about.html" class="nav-link">About</a></li>
+        
+        </ul>
+        <ul class="navbar-nav mr-lg-4 nav-flex-icons">
+          <li class="nav-item">
+            <a href="https://github.com/" target="_blank" class="nav-link waves-effect waves-light">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://twitter.com/?lang=en" target="_blank" class="nav-link waves-effect waves-light">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://pk.linkedin.com/" target="_blank" class="nav-link waves-effect waves-light">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.figma.com/" target="_blank" class="nav-link waves-effect waves-light">
+              <i class="fab fa-figma"></i>
+            </a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <a href="pdfs/Monument.pdf" download="Historical-Monuments" class="btn btn-outline-warning my-2 my-sm-0 size"
+            style="text-decoration: none">Download</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="img-fluid"
+    style="background-image: url(../Images/pexels-joshua-135018.jpg); background-repeat: no-repeat; background-size: 100% 100%;">
+    <div class="container" style="height: 700px;">
+      <div class="row">
+        <div class="col-md-3"></div>
+
+        <div class="col-md-6 mt-44  " style="height: 350px;  width: 500px; ">
+          <video src="../Images/Videos/video3.mp4" class="img-fluid rounded shadow" autoplay muted></video>
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+  </div>
+  <!-- footer -->
+  <footer class="text-gray-600 body-font bg-light shadow">
+    <div class="container px-5 py-4 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <img src="../Images/logo.png" alt="" width="55">
+        <span class="ml-3 text-md-left" style="font-family: 'Nunito';">Historical<br>Monuments</span>
+      </a>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">©
+        2021
+        Historical Monuments<br> All right reserved —
+        sameedsiddiqui9@gmail.com
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a href="https://www.facebook.com/" target="_blank" class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+            viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a href="https://twitter.com/?lang=en" target="_blank" class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+            viewBox="0 0 24 24">
+            <path
+              d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+            </path>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </footer>
+
+
+
+
+  <!-- JavaScripts -->
+  <script>
+    $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
+      if (!$(this).next().hasClass('show')) {
+        $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+      }
+      var $subMenu = $(this).next(".dropdown-menu");
+      $subMenu.toggleClass('show');
+
+
+      $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+        $('.dropdown-submenu .show').removeClass("show");
+      });
+      return false;
+    });
+
+    // btn
+
+    var btn = $('#button');
+
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+      } else {
+        btn.removeClass('show');
+      }
+    });
+
+    btn.on('click', function (e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: 0 }, '300');
+    });
+  </script>
+
+</body>
+
+</html>

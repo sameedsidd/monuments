@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="shortcut icon" href="Images/logo.png">
+  <!-- External Files -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootnavbar.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;900&display=swap" rel="stylesheet">
+  <style>
+    .btn-10 {
+      color: #ffc107;
+    }
+
+    .btn-10:hover {
+      color: #212529;
+      background-color: #ffc107;
+    }
+
+    #button {
+      display: inline-block;
+      background-color: #333;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      border-radius: 4px;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      transition: background-color .3s,
+        opacity .5s, visibility .5s;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1000;
+    }
+
+    #button::after {
+      content: "\f062";
+      font-family: FontAwesome;
+      font-style: normal;
+      font-size: 2em;
+      color: #fff;
+    }
+
+    #button:hover {
+      cursor: pointer;
+      background-color: rgb(158, 152, 152);
+    }
+
+    #button:active {
+      background-color: #555;
+    }
+
+    #button.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+
+    @media (min-width: 500px) {
+
+      #button {
+        margin: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body style="font-family: 'Poppins', sans-serif;">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-2/.5 shadow-xl sticky-top"
+    style="background-color: #61615d; font-family: 'Nunito', sans-serif; letter-spacing: 1px;">
+    <div class="container-fluid">
+      <a href="index.html" class="navbar-brand"><img src="Images/logo.png" alt="" width="43"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcoll">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarcoll">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="subpages/gallery.html" class="nav-link">Gallery</a></li>
+          <!-- Main Drop-Down-->
+          
+        <li class="nav-item"><a href="subpages/about.html" class="nav-link">About</a></li>
+        </ul>
+        <ul class="navbar-nav mr-lg-4 nav-flex-icons">
+          <li class="nav-item">
+            <a href="https://github.com/" target="_blank" class="nav-link waves-effect waves-light">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://twitter.com/?lang=en" target="_blank" class="nav-link waves-effect waves-light">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://pk.linkedin.com/" target="_blank" class="nav-link waves-effect waves-light">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.figma.com/" target="_blank" class="nav-link waves-effect waves-light">
+              <i class="fab fa-figma"></i>
+            </a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <!-- download Button -->
+          <a href="PDFs/Monument.pdf" download="Historical-Monuments" class="btn btn-outline-warning my-2 my-sm-0 size"
+            style="text-decoration: none">Download</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- Carousel -->
+  <div class="carousel slide carousel-fade" data-ride="carousel" id="myslider">
+    <ol class="carousel-indicators">
+      <li data-target="#myslider" data-slide-to="0" class="active"></li>
+      <li data-target="#myslider" data-slide-to="1"></li>
+      <li data-target="#myslider" data-slide-to="2"></li>
+      <li data-target="#myslider" data-slide-to="3"></li>
+    </ol>
+
+    <div class="carousel-inner" role="list">
+      <!--1-->
+      <div class="carousel-item active">
+        <img src="Images/Carousel Images/china-wall.jpg" class="d-block w-100" alt="Great Wall Of China" />
+        <div class="carousel-caption">
+          <h1 class="font-weight-bolder">Great Wall Of China</h1>
+          <p>(China)</p>
+        </div>
+      </div>
+      <!--2-->
+      <div class="carousel-item">
+        <img src="Images/Carousel Images/liberty.jpg" class="d-block w-100" alt="States Of Liberty" />
+        <div class="carousel-caption">
+          <h1 class="font-weight-bolder">Statue of Liberty</h1>
+          <p>(New York)</p>
+        </div>
+      </div>
+      <!--3-->
+      <div class="carousel-item">
+        <img src="Images/Carousel Images/taj-mahal.jpg" class="d-block w-100" alt="Taj Mahal" />
+        <div class="carousel-caption">
+          <h1 class="font-weight-bolder">Taj Mahal</h1>
+          <p>(India)</p>
+        </div>
+      </div>
+      <!--4-->
+      <div class="carousel-item">
+        <img src="Images/Carousel Images/christ.jpg" class="d-block w-100" alt="Christ The Redeemer" />
+        <div class="carousel-caption">
+          <h1 class="font-weight-bolder">Christ The Redeemer</h1>
+          <p>(Brazil)</p>
+        </div>
+      </div>
+
+      <!-- pre/next-->
+      <a class="carousel-control-prev" role="button" data-slide="prev" href="#myslider">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+
+      <a class="carousel-control-next" role="button" data-slide="next" href="#myslider">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+
+    </div>
+  </div>
+  <!-- hero section -->
+  <div class="img-fluid">
+    <section class="text-gray-600 body-font" style="background-color: #777761;">
+      <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div
+          class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center">
+          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 text-justify font-weight-bolder"
+            style="color: rgb(255, 255, 255); font-size: 37.5px; font-family: 'Nunito', sans-serif;">Historical
+            Monuments</h1>
+          <p class="mb-8 leading-relaxed text-justify cl" style="font-size: 17px; color: rgb(255, 255, 255) ">A monument
+            is a type of structure that was explicitly created to commemorate a person or event, or which has become
+            relevant to a social group as a part of their remembrance of historic times or cultural heritage, due to its
+            artistic, historical, political, technical or architectural importance.</p>
+          <div class="flex justify-start">
+            <button
+              class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Read
+              More</button>
+          </div>
+        </div>
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+          <!-- <img class="object-cover object-center rounded" alt="hero" src="images2/pexels-rahul-2081500 (1).jpg"> -->
+          <video class="object-cover object-center rounded shadow" src="Images/Videos/video1.mp4" autoplay
+            muted></video>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- hero two -->
+  <div class="img-fliud">
+    <section class="text-gray-600 body-font" style="background-color: #E8E6D4">
+      <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+          <!-- <img class="object-cover object-center rounded" alt="hero" src="images2/pexels-matthis-volquardsen-2179602.jpg"> -->
+          <video class="object-cover object-center rounded shadow" src="Images/Videos/video2.mp4" autoplay
+            muted></video>
+        </div>
+        <div
+          class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center w3-animate-left">
+          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 font-weight-bolder"
+            style="font-size: 37.5px;  color: rgb(41, 38, 38); font-family: 'Nunito', sans-serif;">Creation and Concept
+          </h1>
+          <p class="mb-8 leading-relaxed text-justify" style="color: rgb(41, 38, 38);">Monuments have been created for
+            thousands of years, and they are often the most durable and famous symbols of ancient civilizations.
+            Prehistoric tumuli, dolmens, and similar structures have been created in a large number of prehistoric
+            cultures across the world, and the many forms of monumental tombs of the more wealthy and powerful members
+            of a society are often the source of much of our information and art from those cultures.</p>
+          <div class="flex justify-center">
+            <button
+              class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Read
+              More</button>
+          </div>
+        </div>
+    </section>
+  </div>
+  <!-- Qoutation -->
+  <section class="text-gray-600 body-font" style="background-color: #a5a58d; height: 570px;">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+        <svg style="color: rgb(82, 69, 69);" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+          class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
+          <path
+            d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+          </path>
+        </svg>
+        <p class="leading-relaxed text-lg text-justify" style="color: white;">We marvel at the ancient
+          architectural wonders that attract tourists the world over. But the essence lies in the history of the
+          foundation. History's frozen music is like a mute sentinel who helps cultures survive. Victories and failures,
+          traditions and heritage, make history ever changing. Yet history remains the same.</p>
+        <span style="background-color: rgb(82, 69, 69)" class="inline-block h-1 w-10 rounded mt-8 mb-6"></span>
+        <h2 class="text-gray-900 font-medium title-font tracking-wider text-xl font-weight-bolder"
+          style="color: whitesmoke; font-family: 'Nunito', sans-serif;">Voltaire. Moreau le Jeune</h2>
+        <p class="text-gray-500">French writer</p>
+      </div>
+    </div>
+  </section>
+  <!-- images boxes -->
+  <section class="pt-5 pb-5" style="background-color: #E8E6D4">
+    <div class="container mt-5">
+      <div class="row">
+
+
+        <div class="col-12">
+          <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+
+                  <div class="col-md-4 mb-3">
+                    <div class="card shadow-md" style="width:330px; background-color: #F4F6F6;">
+                      <img class="card-img-top" src="Images/Boxes Images/colosseum.jpg" alt="Card image"
+                        style="width:100%">
+                      <div class="card-body">
+                        <h4 class="card-title">Colosseum</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eos at
+                          inventore recusandae.</p>
+                        <a href="#" class="btn btn-primary stretched-link">Learn
+                          More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <div class="card shadow-md" style="width:330px; background-color: #F4F6F6;">
+                      <img class="card-img-top" src="Images/Boxes Images/machu pichu.jpg" alt="Card image"
+                        style="width:100%">
+                      <div class="card-body">
+                        <h4 class="card-title">Machu Picchu</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eos at
+                          inventore recusandae.</p>
+                        <a href="#" class="btn btn-primary stretched-link">Learn
+                          More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <div class="card shadow-md" style="width:330px; background-color: #F4F6F6;">
+                      <img class="card-img-top" src="Images/Boxes Images/petra.jpg" alt="Card image" style="width:100%">
+                      <div class="card-body" ">
+                                    <h4 class=" card-title">Petra</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eos at
+                          inventore recusandae.</p>
+                        <a href="#" class="btn btn-primary stretched-link">Learn
+                          More</a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+
+                  <div class="col-md-4 mb-3">
+                    <div class="card shadow-md" style="width:330px; background-color: #F4F6F6;">
+                      <img class="card-img-top" src="Images/Boxes Images/pexels-lars-mulder-5342178.jpg"
+                        alt="Card image" style="width:100%">
+                      <div class="card-body">
+                        <h4 class="card-title">Statue of Liberty</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eos at
+                          inventore recusandae.</p>
+                        <a href="#" class="btn btn-primary stretched-link">Learn
+                          More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <div class="card shadow-md" style="width:330px; background-color: #F4F6F6;">
+                      <img class="card-img-top" src="Images/Boxes Images/pexels-rahul-2081500.jpg" alt="Card image"
+                        style="width:100%">
+                      <div class="card-body">
+                        <h4 class="card-title">Taj Mahal</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eos at
+                          inventore recusandae.</p>
+                        <a href="#" class="btn btn-primary stretched-link">Learn
+                          More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <div class="card shadow-md" style="width:330px; background-color: #F4F6F6;">
+                      <img class="card-img-top" src="Images/Boxes Images/img17.jpg" alt="Card image" style="width:100%">
+                      <div class="card-body">
+                        <h4 class="card-title">Parthenon</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eos at
+                          inventore recusandae.</p>
+                        <a href="#" target="_blank"
+                          class="btn btn-primary stretched-link">Learn More</a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+
+                  <div class="col-md-4 mb-3">
+                    <div class="card shadow-md" style="width:330px; background-color: #F4F6F6;">
+                      <img class="card-img-top" src="Images/Boxes Images/pexels-diana-4445241.jpg" alt="Card image"
+                        style="width:100%">
+                      <div class="card-body">
+                        <h4 class="card-title">Great Wall of China</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eos at
+                          inventore recusandae.</p>
+                        <a href="#" class="btn btn-primary stretched-link">Learn
+                          More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <div class="card shadow-md" style="width:330px; background-color: #F4F6F6;">
+                      <img class="card-img-top" src="Images/Boxes Images/img20.jpg" alt="Card image" style="width:100%">
+                      <div class="card-body">
+                        <h4 class="card-title">Chichen Itza</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eos at
+                          inventore recusandae.</p>
+                        <a href="#" class="btn btn-primary stretched-link">Learn
+                          More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <div class="card shadow-md" style="width:330px; background-color: #F4F6F6;">
+                      <img class="card-img-top" src="Images/Boxes Images/8e11b1d818f1603fa568b2f3eb763d88.jpg"
+                        alt="Card image" style="width:100%">
+                      <div class="card-body">
+                        <h4 class="card-title">Christ The Redeemer</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eos at
+                          inventore recusandae.</p>
+                        <a href="#" class="btn btn-primary stretched-link">Learn
+                          More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 text-center mt-4">
+          <a class="btn btn-dark mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+            <i class="fa fa-arrow-left"></i>
+          </a>
+          <a class="btn btn-dark mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+            <i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- testimonial -->
+  <!-- <section class="text-gray-400 bg-gray-900 body-font" style="background-color: #646452;">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="text-2xl font-medium title-font mb-4 text-white tracking-widest font-weight-bolder text-white"
+          style="font-family: 'Nunito', sans-serif;">OUR
+          TEAM</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-white">This is the best what we can do together and
+          achieve
+          everything that we deliver to another side. Hope we would good at all stuff!</p>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="p-4 lg:w-1/2">
+          <div
+            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+              src="Images/Testimonial Images/sameed.jpg">
+            <div class="flex-grow sm:pl-8">
+              <h2 class="title-font font-medium text-lg text-white">Sameed Siddqiui</h2>
+              <h3 class="mb-3">Web Designer</h3>
+              <p class="mb-4 text-light">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/2">
+          <div
+            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+              src="Images/Testimonial Images/adnan.jpg">
+            <div class="flex-grow sm:pl-8">
+              <h2 class="title-font font-medium text-lg text-white">Adnan Sajid</h2>
+              <h3 class="mb-3">Web Developer</h3>
+              <p class="mb-4 text-light">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/2">
+          <div
+            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+              src="Images/Testimonial Images/sharjeel.jpg">
+            <div class="flex-grow sm:pl-8">
+              <h2 class="title-font font-medium text-lg text-white">Sharjeel Sheikh</h2>
+              <h3 class="mb-3">CSS Expert</h3>
+              <p class="mb-4 text-light">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/2">
+          <div
+            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+              src="Images/Testimonial Images/umer.jpg">
+            <div class="flex-grow sm:pl-8">
+              <h2 class="title-font font-medium text-lg text-white">Umer Irfan</h2>
+              <h3 class="mb-3">HTML Expert</h3>
+              <p class="mb-4 text-light">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- gallary -->
+  <section class="text-gray-600 body-font" style="background-color: #c5c5a9">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+
+      <div class="flex flex-wrap md:-m-2 -m-1">
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block rounded" src="Images/img1.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block rounded" src="Images/img2.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-full">
+            <img alt="gallery" class="w-full h-full object-cover object-center block rounded"
+              src="Images/pexels-meruyert-gonullu-6152260.jpg">
+          </div>
+        </div>
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-full">
+            <img alt="gallery" class="w-full h-full object-cover object-center block rounded"
+              src="Images/pexels-vierro-3629813.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block rounded"
+              src="Images/pexels-min-an-749090.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block rounded"
+              src="Images/pexels-pixabay-161863.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-gray-600 body-font shadow">
+    <div class="container px-5 py-4 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <img src="Images/logo.png" alt="Logo" width="55">
+        <span class="ml-3 text-md-left" style="font-family: 'Nunito', sans-serif;">Historical<br>Monuments</span>
+      </a>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2021
+        Historical Monuments<br> All right reserved —
+        sameedsiddiqui9@gmail.com
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a href="https://www.facebook.com/" target="_blank" class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+            viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a href="https://twitter.com/?lang=en" target="_blank" class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+            viewBox="0 0 24 24">
+            <path
+              d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+            </path>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
+      if (!$(this).next().hasClass('show')) {
+        $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+      }
+      var $subMenu = $(this).next(".dropdown-menu");
+      $subMenu.toggleClass('show');
+
+
+      $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+        $('.dropdown-submenu .show').removeClass("show");
+      });
+      return false;
+    });
+    // btn
+    var btn = $('#button');
+
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+      } else {
+        btn.removeClass('show');
+      }
+    });
+
+    btn.on('click', function (e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: 0 }, '300');
+    });
+  </script>
+</body>
+
+</html>
